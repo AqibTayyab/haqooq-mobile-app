@@ -1,0 +1,10 @@
+{
+  "name": "haqooq-backend",
+  "version": "0.1.0",
+  "private": true,
+  "description": "HAQOOQ Gemini proxy (Member 2)",
+  "main": "server.js",
+  "engines": { "node": ">=20" },
+  "scripts": { "start": "node server.js", "test": "node --test test/", "eval": "node evaluation/run_eval.js" },
+  "dependencies": { "cors": "^2.8.5", "express": "^4.19.2", "express-rate-limit": "^7.4.0" }
+}
