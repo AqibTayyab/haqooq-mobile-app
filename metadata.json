@@ -1,0 +1,6 @@
+{
+  "name": "HAQOOQ",
+  "description": "Multilingual legal-rights guide, AI assistant, emergency SOS, and lawyer directory for citizens in Urdu, English, and Roman Urdu.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

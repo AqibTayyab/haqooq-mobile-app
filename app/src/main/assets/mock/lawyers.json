@@ -1,0 +1,97 @@
+[
+  {
+    "id": "demo_lawyer_1",
+    "name": "Adv. Zainab Qureshi (Demo)",
+    "city": "Multan",
+    "specializations": ["women_safety", "domestic", "fir"],
+    "languages": ["en", "ur", "roman_ur"],
+    "experience_years": 7,
+    "fee_pkr": "Free Demo / PKR 1,500",
+    "rating": 4.9,
+    "review_count": 2,
+    "bio_en": "Fictional demo profile illustrating women-safety, workplace harassment, and FIR consultation flow.",
+    "bio_ur": "یہ ایک فرضی ڈیمو پروفائل ہے جو خواتین کے تحفظ اور ایف آئی آر رہنمائی کے عمل کو دکھاتا ہے۔",
+    "bio_roman": "Yeh aik demo profile hai jo khawateen tahaffuz aur FIR consultation flow dikhata hai.",
+    "is_demo": true,
+    "reviews": [
+      {
+        "id": "r1",
+        "author_name": "Ayesha K. (Demo)",
+        "rating": 5,
+        "comment": "Clear guidance on filing a workplace complaint.",
+        "date": "2026-11-18"
+      },
+      {
+        "id": "r2",
+        "author_name": "Sana M. (Demo)",
+        "rating": 5,
+        "comment": "Very calm and structured briefing review.",
+        "date": "2026-11-10"
+      }
+    ]
+  },
+  {
+    "id": "demo_lawyer_2",
+    "name": "Adv. Bilal Mahmood (Demo)",
+    "city": "Lahore",
+    "specializations": ["police_arrest", "bail_court", "fir"],
+    "languages": ["en", "ur", "roman_ur"],
+    "experience_years": 11,
+    "fee_pkr": "Free Demo / PKR 2,000",
+    "rating": 4.8,
+    "review_count": 1,
+    "bio_en": "Fictional demo profile focused on arrest safeguards, Section 22-A petitions, and bail procedure.",
+    "bio_ur": "یہ ڈیمو پروفائل ضمانت، گرفتاری کے حقوق اور دفعہ 22-A رہنمائی کے لیے ہے۔",
+    "bio_roman": "Yeh demo profile giraftari ke haqooq aur zamanat ke tareeqa-e-kaar ke liye hai.",
+    "is_demo": true,
+    "reviews": [
+      {
+        "id": "r3",
+        "author_name": "Usman A. (Demo)",
+        "rating": 5,
+        "comment": "Explained bail steps without jargon.",
+        "date": "2026-11-12"
+      }
+    ]
+  },
+  {
+    "id": "demo_lawyer_3",
+    "name": "Adv. Hira Mansoor (Demo)",
+    "city": "Karachi",
+    "specializations": ["cybercrime", "employment", "consumer"],
+    "languages": ["en", "roman_ur"],
+    "experience_years": 5,
+    "fee_pkr": "Free Demo / PKR 1,000",
+    "rating": 4.7,
+    "review_count": 1,
+    "bio_en": "Fictional demo profile covering PECA cybercrime reporting, unpaid wages, and consumer claims.",
+    "bio_ur": "یہ ڈیمو پروفائل سائبر کرائم، تنخواہ اور صارف حقوق کی رہنمائی کے لیے ہے۔",
+    "bio_roman": "Yeh demo profile cybercrime, tankhwah aur sarif haqooq ki rehnumai ke liye hai.",
+    "is_demo": true,
+    "reviews": [
+      {
+        "id": "r4",
+        "author_name": "Ahmed R. (Demo)",
+        "rating": 5,
+        "comment": "Helped organize screenshots for complaint.",
+        "date": "2026-11-20"
+      }
+    ]
+  },
+  {
+    "id": "demo_lawyer_4",
+    "name": "Adv. Tariq Mehmood (Demo)",
+    "city": "Islamabad",
+    "specializations": ["property", "consumer", "employment"],
+    "languages": ["en", "ur"],
+    "experience_years": 14,
+    "fee_pkr": "Free Demo / PKR 2,500",
+    "rating": 4.8,
+    "review_count": 0,
+    "bio_en": "Fictional demo profile demonstrating tenancy disputes, property possession, and civil notices.",
+    "bio_ur": "یہ ڈیمو پروفائل کرایہ داری اور جائیداد کے تنازعات کے ڈیمو کے لیے ہے۔",
+    "bio_roman": "Yeh demo profile kiraya dari aur jaidad ke masail ke demo ke liye hai.",
+    "is_demo": true,
+    "reviews": []
+  }
+]
