@@ -1,0 +1,306 @@
+[
+  {
+    "id": "police_stop_101",
+    "title": "Agar police aapko roke",
+    "category": "police_arrest",
+    "lang": "roman_ur",
+    "body": "Shant rahein aur izzat se baat karein. Aap pooch sakte hain ke kyun roka gaya hai. Officers ke naam, vehicle number, waqt aur jagah note karein. Aap family member ya lawyer se rabta karne ki request kar sakte hain. Jo paper samajh na aaye us par sign na karein.",
+    "steps": [
+      "Shant rahein",
+      "Wajah poochein",
+      "Details note karein",
+      "Family ya lawyer se rabta"
+    ],
+    "source_name": "DRAFT - VERIFY on Pakistan Code",
+    "source_url": "https://pakistancode.gov.pk",
+    "last_reviewed": "2026-11-27",
+    "reviewer": "",
+    "urgency_hint": "medium",
+    "keywords": [
+      "police",
+      "roka",
+      "thana",
+      "stop",
+      "pucho"
+    ]
+  },
+  {
+    "id": "police_arrest_102",
+    "title": "Agar aapko giraftar kiya jaye",
+    "category": "police_arrest",
+    "lang": "roman_ur",
+    "body": "Giraftari par shant rahein aur physically resist na karein. Giraftari ki wajah poochein. Aap family ko khabar karne aur lawyer se rabta karne ki request kar sakte hain. Jo document samajh na aaye us par sign na karein. Thana ka naam, waqt aur officers ki details yaad rakhein.",
+    "steps": [
+      "Wajah poochein",
+      "Family ya lawyer se rabta",
+      "Unclear paper par sign na karein",
+      "Thana aur waqt note karein"
+    ],
+    "source_name": "DRAFT - VERIFY on Pakistan Code",
+    "source_url": "https://pakistancode.gov.pk",
+    "last_reviewed": "2026-11-27",
+    "reviewer": "",
+    "urgency_hint": "high",
+    "keywords": [
+      "giraftar",
+      "arrest",
+      "police",
+      "custody",
+      "hirasat"
+    ]
+  },
+  {
+    "id": "fir_103",
+    "title": "FIR kaise darj karwayein",
+    "category": "fir",
+    "lang": "roman_ur",
+    "body": "FIR kisi criminal waqia ki pehli record hoti hai. Jis ilaqe mein waqia hua wahan ke thane jayen, baatein saaf bayan karein aur FIR ki copy mangein. Copy mehfooz rakhein.",
+    "steps": [
+      "Relevant thane jayen",
+      "Waqia saaf bayan karein",
+      "FIR copy lein",
+      "Copy mehfooz rakhein"
+    ],
+    "source_name": "DRAFT - VERIFY on Pakistan Code",
+    "source_url": "https://pakistancode.gov.pk",
+    "last_reviewed": "2026-11-27",
+    "reviewer": "",
+    "urgency_hint": "medium",
+    "keywords": [
+      "fir",
+      "report",
+      "shikayat",
+      "police station",
+      "darj"
+    ]
+  },
+  {
+    "id": "fir_104",
+    "title": "Agar police FIR darj na kare",
+    "category": "fir",
+    "lang": "roman_ur",
+    "body": "Agar police FIR darj na kare to wajah poochein. Aap lawyer, legal-aid organization ya relevant police complaint authority se rabta kar sakte hain. Messages, photos, naam, dates aur witnesses ka saboot save rakhein. Shant rahein aur sab kuch document karein.",
+    "steps": [
+      "Wajah poochein",
+      "Saboot save karein",
+      "Lawyer ya legal aid se rabta",
+      "Visits ka record rakhein"
+    ],
+    "source_name": "DRAFT - VERIFY on Pakistan Code",
+    "source_url": "https://pakistancode.gov.pk",
+    "last_reviewed": "2026-11-27",
+    "reviewer": "",
+    "urgency_hint": "medium",
+    "keywords": [
+      "fir refused",
+      "inkar",
+      "report",
+      "shikayat",
+      "police"
+    ]
+  },
+  {
+    "id": "bail_105",
+    "title": "Giraftari ke baad zamanat",
+    "category": "bail_court",
+    "lang": "roman_ur",
+    "body": "Zamanat custody se rihaai ke legal process ko kehte hain. Aam tor par lawyer relevant court mein application file karta hai. FIR copy, giraftari ki details aur court notices mehfooz rakhein aur court dates miss na karein. Foran licensed advocate se rabta karein.",
+    "steps": [
+      "Foran lawyer se rabta",
+      "FIR aur court papers rakhein",
+      "Court dates miss na karein",
+      "Lawyer se zamanat ka process poochein"
+    ],
+    "source_name": "DRAFT - VERIFY on Pakistan Code",
+    "source_url": "https://pakistancode.gov.pk",
+    "last_reviewed": "2026-11-27",
+    "reviewer": "",
+    "urgency_hint": "high",
+    "keywords": [
+      "bail",
+      "zamanat",
+      "court",
+      "giraftar",
+      "rihaai"
+    ]
+  },
+  {
+    "id": "women_106",
+    "title": "Office harassment ke options",
+    "category": "women_safety",
+    "lang": "roman_ur",
+    "body": "Office mein harassment ho to saboot save karein: messages, emails, dates, naam aur witnesses. Check karein ke office mein harassment policy ya committee hai. Aap relevant authority ko report kar sakte hain ya lawyer se rabta kar sakte hain.",
+    "steps": [
+      "Messages aur dates save karein",
+      "Office policy check karein",
+      "Committee ya authority ko report",
+      "Lawyer se rabta"
+    ],
+    "source_name": "DRAFT - VERIFY on Pakistan Code",
+    "source_url": "https://pakistancode.gov.pk",
+    "last_reviewed": "2026-11-27",
+    "reviewer": "",
+    "urgency_hint": "medium",
+    "keywords": [
+      "harassment",
+      "office",
+      "tang",
+      "report",
+      "committee"
+    ]
+  },
+  {
+    "id": "women_107",
+    "title": "Street harassment aur foran safety",
+    "category": "women_safety",
+    "lang": "roman_ur",
+    "body": "Agar unsafe mehsoos ho to bheed wali roshan jagah jayen aur kisi trusted insaan ko call karein. Safe ho to messages, screenshots ya vehicle number save karein. Khatre mein SOS use karein aur police emergency number par call consider karein.",
+    "steps": [
+      "Safe jagah jayen",
+      "Trusted person ko call",
+      "Safe ho to saboot save",
+      "Khatre mein SOS use karein"
+    ],
+    "source_name": "DRAFT - VERIFY on Pakistan Code",
+    "source_url": "https://pakistancode.gov.pk",
+    "last_reviewed": "2026-11-27",
+    "reviewer": "",
+    "urgency_hint": "high",
+    "keywords": [
+      "harassment",
+      "street",
+      "unsafe",
+      "danger",
+      "tang"
+    ]
+  },
+  {
+    "id": "domestic_108",
+    "title": "Gharili tashadud ke case mein",
+    "category": "domestic",
+    "lang": "roman_ur",
+    "body": "Foran khatra ho to mumkin ho to safe jagah jayen aur kisi trusted insaan se rabta karein. Safe ho to messages, injury ki photos, medical records aur dates save karein. Aap lawyer, women-protection service ya legal-aid se madad le sakte hain.",
+    "steps": [
+      "Foran safety ensure karein",
+      "Safe ho to saboot save",
+      "Trusted person se rabta",
+      "Lawyer ya protection service"
+    ],
+    "source_name": "DRAFT - VERIFY on Pakistan Code",
+    "source_url": "https://pakistancode.gov.pk",
+    "last_reviewed": "2026-11-27",
+    "reviewer": "",
+    "urgency_hint": "high",
+    "keywords": [
+      "domestic violence",
+      "ghar",
+      "maar",
+      "abuse",
+      "protection",
+      "tashadud"
+    ]
+  },
+  {
+    "id": "cyber_109",
+    "title": "Online fraud ya scam",
+    "category": "cybercrime",
+    "lang": "roman_ur",
+    "body": "Online fraud ho to mazeed payment band karein aur codes share na karein. Profile, chat, receipts aur transaction IDs ke screenshots save karein. Account ko platform par report karein aur relevant cybercrime authority ko report consider karein. Password change karein aur 2FA on karein.",
+    "steps": [
+      "Payments band karein",
+      "Screenshots aur receipts save",
+      "Platform ko report",
+      "Password change aur 2FA"
+    ],
+    "source_name": "DRAFT - VERIFY on Pakistan Code",
+    "source_url": "https://pakistancode.gov.pk",
+    "last_reviewed": "2026-11-27",
+    "reviewer": "",
+    "urgency_hint": "medium",
+    "keywords": [
+      "fraud",
+      "scam",
+      "online",
+      "payment",
+      "hack",
+      "cyber"
+    ]
+  },
+  {
+    "id": "cyber_110",
+    "title": "Cyber harassment ya hacked account",
+    "category": "cybercrime",
+    "lang": "roman_ur",
+    "body": "Online harassment ya hacked account par reply na karein. Dates aur usernames ke sath screenshots lein, account block aur report karein, password change karein aur 2FA on karein. Serious threat ya blackmail par saboot save kar ke lawyer se rabta karein.",
+    "steps": [
+      "Screenshots lein",
+      "Block aur report karein",
+      "Password aur 2FA",
+      "Serious threat par lawyer"
+    ],
+    "source_name": "DRAFT - VERIFY on Pakistan Code",
+    "source_url": "https://pakistancode.gov.pk",
+    "last_reviewed": "2026-11-27",
+    "reviewer": "",
+    "urgency_hint": "medium",
+    "keywords": [
+      "cyber harassment",
+      "hacked",
+      "blackmail",
+      "account",
+      "threat"
+    ]
+  },
+  {
+    "id": "consumer_111",
+    "title": "Consumer complaint",
+    "category": "consumer",
+    "lang": "roman_ur",
+    "body": "Kharab product ya service ho to receipt, warranty, photos aur seller ke messages save rakhein. Seller se likh kar refund ya repair mangein. Inkar par relevant consumer forum ya authority mein complaint kar sakte hain. Sab ki copies rakhein.",
+    "steps": [
+      "Receipt aur photos rakhein",
+      "Seller se likh kar mangein",
+      "Inkar par complaint",
+      "Copies rakhein"
+    ],
+    "source_name": "DRAFT - VERIFY on Pakistan Code",
+    "source_url": "https://pakistancode.gov.pk",
+    "last_reviewed": "2026-11-27",
+    "reviewer": "",
+    "urgency_hint": "low",
+    "keywords": [
+      "consumer",
+      "product",
+      "refund",
+      "receipt",
+      "complaint",
+      "kharab"
+    ]
+  },
+  {
+    "id": "employment_112",
+    "title": "Salary na milne ya unfair termination",
+    "category": "employment",
+    "lang": "roman_ur",
+    "body": "Salary na mile ya job unfairly khatam ho to contract, salary slips, attendance aur messages save rakhein. Employer se likh kar pending amount mangein. Hal na ho to lawyer ya relevant labour authority se options poochein.",
+    "steps": [
+      "Contract aur slips rakhein",
+      "Likh kar mangein",
+      "Messages save",
+      "Lawyer ya labour authority"
+    ],
+    "source_name": "DRAFT - VERIFY on Pakistan Code",
+    "source_url": "https://pakistancode.gov.pk",
+    "last_reviewed": "2026-11-27",
+    "reviewer": "",
+    "urgency_hint": "medium",
+    "keywords": [
+      "salary",
+      "unpaid",
+      "job",
+      "termination",
+      "employer",
+      "naukri"
+    ]
+  }
+]

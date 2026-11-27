@@ -1,0 +1,5 @@
+[
+  {"id":"demo_1","name":"Demo Lawyer (Not a Real Lawyer)","city":"Multan","specializations":["criminal","family"],
+   "languages":["ur","en"],"fee":0,"rating":4.8,"is_verified":false,"is_demo":true,
+   "bio":"Demo Account - Not a Real Lawyer. For demonstration only."}
+]

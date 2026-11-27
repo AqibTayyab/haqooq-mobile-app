@@ -1,0 +1,7 @@
+[
+  {"id":"police_stop_001","title":"If police stop or question you","category":"police_arrest","lang":"en",
+   "body":"DRAFT - VERIFY before demo. Stay calm and polite. You can ask why you are being stopped. Keep your ID ready.",
+   "steps":["Stay calm","Ask the reason","Note officer names, time, place","Contact a family member or lawyer"],
+   "source_name":"VERIFY on Pakistan Code","source_url":"https://pakistancode.gov.pk",
+   "last_reviewed":"UNREVIEWED","reviewer":"","urgency_hint":"medium","keywords":["police","stop","roka","thana","question"]}
+]

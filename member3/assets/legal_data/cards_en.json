@@ -1,0 +1,304 @@
+[
+  {
+    "id": "police_stop_001",
+    "title": "If police stop or question you",
+    "category": "police_arrest",
+    "lang": "en",
+    "body": "Stay calm and polite. You can ask why you are being stopped or questioned. Note the officers' names, vehicle number, time and place. You may ask to contact a family member or a lawyer. Do not argue physically and do not sign papers you do not understand.",
+    "steps": [
+      "Ask why you are stopped",
+      "Stay calm",
+      "Note officer names, time and place",
+      "Ask to contact family or a lawyer"
+    ],
+    "source_name": "DRAFT - VERIFY on Pakistan Code",
+    "source_url": "https://pakistancode.gov.pk",
+    "last_reviewed": "2026-11-27",
+    "reviewer": "",
+    "urgency_hint": "medium",
+    "keywords": [
+      "police",
+      "stop",
+      "roka",
+      "thana",
+      "question"
+    ]
+  },
+  {
+    "id": "police_arrest_002",
+    "title": "If you are arrested or detained",
+    "category": "police_arrest",
+    "lang": "en",
+    "body": "If you are arrested, stay calm and do not resist physically. Ask the reason for the arrest. You may ask to inform a family member and to consult a lawyer. Do not sign any document you do not understand. Remember the police station name, time and officers' details.",
+    "steps": [
+      "Ask the reason for arrest",
+      "Ask to call family or a lawyer",
+      "Do not sign unclear papers",
+      "Note the station and time"
+    ],
+    "source_name": "DRAFT - VERIFY on Pakistan Code",
+    "source_url": "https://pakistancode.gov.pk",
+    "last_reviewed": "2026-11-27",
+    "reviewer": "",
+    "urgency_hint": "high",
+    "keywords": [
+      "arrest",
+      "giraftar",
+      "detain",
+      "custody",
+      "police"
+    ]
+  },
+  {
+    "id": "fir_003",
+    "title": "How to register an FIR",
+    "category": "fir",
+    "lang": "en",
+    "body": "An FIR (First Information Report) is the first record of a criminal complaint at a police station. Go to the police station of the area where the incident happened, explain the facts clearly and ask for a copy of the FIR. Keep the copy safe.",
+    "steps": [
+      "Go to the relevant police station",
+      "Explain facts clearly",
+      "Ask for an FIR copy",
+      "Keep the copy safe"
+    ],
+    "source_name": "DRAFT - VERIFY on Pakistan Code",
+    "source_url": "https://pakistancode.gov.pk",
+    "last_reviewed": "2026-11-27",
+    "reviewer": "",
+    "urgency_hint": "medium",
+    "keywords": [
+      "fir",
+      "report",
+      "complaint",
+      "police station",
+      "shikayat"
+    ]
+  },
+  {
+    "id": "fir_004",
+    "title": "If police refuse to register an FIR",
+    "category": "fir",
+    "lang": "en",
+    "body": "If police refuse to register your FIR, ask for the reason. You may contact a lawyer, a legal-aid organization or the relevant police complaint authority. Keep evidence such as messages, photos, names, dates and witnesses. Stay calm and document everything.",
+    "steps": [
+      "Ask for the reason",
+      "Save evidence",
+      "Contact a lawyer or legal aid",
+      "Keep a record of your visits"
+    ],
+    "source_name": "DRAFT - VERIFY on Pakistan Code",
+    "source_url": "https://pakistancode.gov.pk",
+    "last_reviewed": "2026-11-27",
+    "reviewer": "",
+    "urgency_hint": "medium",
+    "keywords": [
+      "fir refused",
+      "police refuse",
+      "report not registered",
+      "shikayat"
+    ]
+  },
+  {
+    "id": "bail_005",
+    "title": "Bail basics after arrest",
+    "category": "bail_court",
+    "lang": "en",
+    "body": "Bail is a legal process to seek release from custody while a case continues. A lawyer usually files the application in the relevant court. Keep the FIR copy, arrest details and court notices safe, and do not miss court dates. Contact a licensed advocate urgently.",
+    "steps": [
+      "Contact a lawyer urgently",
+      "Keep FIR and court papers",
+      "Do not miss court dates",
+      "Ask your lawyer about the bail process"
+    ],
+    "source_name": "DRAFT - VERIFY on Pakistan Code",
+    "source_url": "https://pakistancode.gov.pk",
+    "last_reviewed": "2026-11-27",
+    "reviewer": "",
+    "urgency_hint": "high",
+    "keywords": [
+      "bail",
+      "zamanat",
+      "court",
+      "arrest",
+      "release"
+    ]
+  },
+  {
+    "id": "women_006",
+    "title": "Workplace harassment options",
+    "category": "women_safety",
+    "lang": "en",
+    "body": "If you face harassment at work, save evidence: messages, emails, dates, names and witnesses. Check whether your workplace has a harassment policy or complaint committee. You may also report to the relevant authority or consult a lawyer.",
+    "steps": [
+      "Save messages and dates",
+      "Check workplace policy",
+      "Report to the committee or authority",
+      "Consult a lawyer"
+    ],
+    "source_name": "DRAFT - VERIFY on Pakistan Code",
+    "source_url": "https://pakistancode.gov.pk",
+    "last_reviewed": "2026-11-27",
+    "reviewer": "",
+    "urgency_hint": "medium",
+    "keywords": [
+      "harassment",
+      "workplace",
+      "office",
+      "tang",
+      "report"
+    ]
+  },
+  {
+    "id": "women_007",
+    "title": "Street harassment and immediate safety",
+    "category": "women_safety",
+    "lang": "en",
+    "body": "If you feel unsafe, move to a crowded, well-lit place and call someone you trust. Save evidence such as messages, screenshots or a vehicle number if it is safe to do so. In danger, use the SOS feature and consider calling the police emergency number.",
+    "steps": [
+      "Move to a safe crowded place",
+      "Call a trusted person",
+      "Save evidence if safe",
+      "Use SOS if in danger"
+    ],
+    "source_name": "DRAFT - VERIFY on Pakistan Code",
+    "source_url": "https://pakistancode.gov.pk",
+    "last_reviewed": "2026-11-27",
+    "reviewer": "",
+    "urgency_hint": "high",
+    "keywords": [
+      "harassment",
+      "street",
+      "unsafe",
+      "danger",
+      "tang"
+    ]
+  },
+  {
+    "id": "domestic_008",
+    "title": "If you face domestic violence",
+    "category": "domestic",
+    "lang": "en",
+    "body": "If you are in immediate danger, move to a safe place if possible and contact someone you trust. Save evidence such as messages, photos of injuries, medical records and dates when it is safe. You may seek help from a lawyer, a women-protection service or a legal-aid organization.",
+    "steps": [
+      "Ensure immediate safety",
+      "Save evidence if safe",
+      "Contact a trusted person",
+      "Seek a lawyer or protection service"
+    ],
+    "source_name": "DRAFT - VERIFY on Pakistan Code",
+    "source_url": "https://pakistancode.gov.pk",
+    "last_reviewed": "2026-11-27",
+    "reviewer": "",
+    "urgency_hint": "high",
+    "keywords": [
+      "domestic violence",
+      "ghar",
+      "maar",
+      "abuse",
+      "husband",
+      "protection"
+    ]
+  },
+  {
+    "id": "cyber_009",
+    "title": "Online fraud or scam",
+    "category": "cybercrime",
+    "lang": "en",
+    "body": "If you were scammed online, stop further payments and do not share codes. Save screenshots of the profile, chat, receipts and transaction IDs. Report the account to the platform and consider reporting to the relevant cybercrime authority. Change passwords and enable two-factor authentication.",
+    "steps": [
+      "Stop payments",
+      "Save screenshots and receipts",
+      "Report to the platform",
+      "Change passwords and enable 2FA"
+    ],
+    "source_name": "DRAFT - VERIFY on Pakistan Code",
+    "source_url": "https://pakistancode.gov.pk",
+    "last_reviewed": "2026-11-27",
+    "reviewer": "",
+    "urgency_hint": "medium",
+    "keywords": [
+      "fraud",
+      "scam",
+      "online",
+      "payment",
+      "hack"
+    ]
+  },
+  {
+    "id": "cyber_010",
+    "title": "Cyber harassment or hacked account",
+    "category": "cybercrime",
+    "lang": "en",
+    "body": "If someone harasses you online or your account is hacked, do not engage. Take screenshots with dates and usernames, block and report the account, change your password and enable two-factor authentication. For serious threats or blackmail, save evidence and consult a lawyer.",
+    "steps": [
+      "Take screenshots",
+      "Block and report the account",
+      "Change password and enable 2FA",
+      "Consult a lawyer for serious threats"
+    ],
+    "source_name": "DRAFT - VERIFY on Pakistan Code",
+    "source_url": "https://pakistancode.gov.pk",
+    "last_reviewed": "2026-11-27",
+    "reviewer": "",
+    "urgency_hint": "medium",
+    "keywords": [
+      "cyber harassment",
+      "hacked",
+      "blackmail",
+      "account",
+      "threat"
+    ]
+  },
+  {
+    "id": "consumer_011",
+    "title": "Consumer complaint basics",
+    "category": "consumer",
+    "lang": "en",
+    "body": "If a product or service is faulty, keep the receipt, warranty, photos and messages with the seller. Ask the seller in writing for a refund or repair. If they refuse, you may complain to the relevant consumer forum or authority. Keep copies of everything.",
+    "steps": [
+      "Keep receipt and photos",
+      "Ask the seller in writing",
+      "Complain if they refuse",
+      "Keep copies"
+    ],
+    "source_name": "DRAFT - VERIFY on Pakistan Code",
+    "source_url": "https://pakistancode.gov.pk",
+    "last_reviewed": "2026-11-27",
+    "reviewer": "",
+    "urgency_hint": "low",
+    "keywords": [
+      "consumer",
+      "product",
+      "refund",
+      "receipt",
+      "complaint",
+      "faulty"
+    ]
+  },
+  {
+    "id": "employment_012",
+    "title": "Unpaid salary or unfair termination",
+    "category": "employment",
+    "lang": "en",
+    "body": "If your salary is unpaid or you were terminated unfairly, keep your contract, salary slips, attendance record and messages. Politely ask the employer in writing for the pending amount. If it is not resolved, consult a lawyer or the relevant labour authority.",
+    "steps": [
+      "Keep contract and salary slips",
+      "Ask in writing",
+      "Save all messages",
+      "Consult a lawyer or labour authority"
+    ],
+    "source_name": "DRAFT - VERIFY on Pakistan Code",
+    "source_url": "https://pakistancode.gov.pk",
+    "last_reviewed": "2026-11-27",
+    "reviewer": "",
+    "urgency_hint": "medium",
+    "keywords": [
+      "salary",
+      "unpaid",
+      "job",
+      "termination",
+      "employer",
+      "naukri"
+    ]
+  }
+]

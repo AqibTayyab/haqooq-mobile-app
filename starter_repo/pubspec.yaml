@@ -1,0 +1,36 @@
+name: haqooq
+description: HAQOOQ - offline legal rights, AI assistant, SOS and lawyer connection for Pakistan.
+publish_to: 'none'
+version: 0.1.0+1
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  provider: ^6.1.2
+  http: ^1.2.2
+  sqflite: ^2.3.3
+  path: ^1.9.0
+  path_provider: ^2.1.4
+  shared_preferences: ^2.3.2
+  connectivity_plus: ^6.0.5
+  geolocator: ^13.0.1
+  permission_handler: ^11.3.1
+  url_launcher: ^6.3.0
+  intl: any
+  uuid: ^4.5.0
+  # Member 3 adds: flutter pub add flutter_gemma   (check its README for platform setup)
+  # Member 4 may add: flutter pub add battery_plus flutter_local_notifications
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/legal_data/
+    - assets/mock/
