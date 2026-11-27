@@ -34,3 +34,5 @@ build/
 backend/node_modules/
 backend/.firebase/
 backend/.supabase/
+
+.gradle/

@@ -75,9 +75,13 @@ import com.example.ui.theme.EmergencyRed
 fun ChatScreen(
     messages: List<ChatMessage>,
     isLoading: Boolean,
+    chatError: String? = null,
     activeMode: AiMode,
     strings: LocalizedStrings,
     onSendMessage: (String) -> Unit,
+    onRetryOnline: () -> Unit = {},
+    onAnswerOffline: () -> Unit = {},
+    onDismissError: () -> Unit = {},
     onClearChat: () -> Unit,
     onSaveNote: (ChatMessage) -> Unit,
     onOpenCard: (String) -> Unit,
@@ -302,6 +306,50 @@ fun ChatScreen(
                                 style = MaterialTheme.typography.bodySmall,
                                 color = MaterialTheme.colorScheme.onSurfaceVariant
                             )
+                        }
+                    }
+                }
+
+                if (!chatError.isNullOrBlank()) {
+                    item {
+                        Surface(
+                            shape = RoundedCornerShape(16.dp),
+                            color = MaterialTheme.colorScheme.errorContainer,
+                            border = BorderStroke(1.dp, MaterialTheme.colorScheme.error.copy(alpha = 0.4f)),
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .testTag("chat_error_card")
+                        ) {
+                            Column(
+                                modifier = Modifier.padding(14.dp),
+                                verticalArrangement = Arrangement.spacedBy(8.dp)
+                            ) {
+                                Text(
+                                    text = chatError,
+                                    style = MaterialTheme.typography.bodySmall,
+                                    color = MaterialTheme.colorScheme.onErrorContainer
+                                )
+                                Row(
+                                    horizontalArrangement = Arrangement.spacedBy(8.dp),
+                                    verticalAlignment = Alignment.CenterVertically
+                                ) {
+                                    OutlinedButton(
+                                        onClick = onRetryOnline,
+                                        modifier = Modifier.testTag("chat_retry_online_button")
+                                    ) {
+                                        Text(strings.retryLabel)
+                                    }
+                                    Button(
+                                        onClick = onAnswerOffline,
+                                        modifier = Modifier.testTag("chat_fallback_offline_button")
+                                    ) {
+                                        Text(strings.modeOfflineLabel)
+                                    }
+                                    TextButton(onClick = onDismissError) {
+                                        Text("OK")
+                                    }
+                                }
+                            }
                         }
                     }
                 }

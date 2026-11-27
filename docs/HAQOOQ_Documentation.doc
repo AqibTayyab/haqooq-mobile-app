@@ -1,0 +1,74 @@
+{\rtf1\ansi\deff0
+{\fonttbl{\f0\fswiss\fcharset0 Calibri;}{\f1\fmodern\fcharset0 Consolas;}}
+{\colortbl;\red15\green118\blue110;\red30\green41\blue59;\red100\green116\blue139;\red185\green28\blue28;}
+\viewkind4\uc1\pard\sa180\sl276\slmult1\f0\fs36\b\cf1 HAQOOQ - Application Documentation\par
+\fs22\b0\cf3 Multilingual Citizen Legal Guide, AI Legal Assistant, Emergency SOS & Demo Lawyer Directory\par
+\fs20\cf2 Package / Application ID: \f1 com.aistudio.haqooq.kxmpzq\f0  |  Version: 1.0  |  Platform: Android (Min SDK 24, Target SDK 36)\par
+\pard\sa140\sl276\slmult1\line
+
+\fs28\b\cf1 1. Executive Summary\par
+\fs22\b0\cf2 HAQOOQ is a native Android application built with Kotlin and Jetpack Compose (Material 3 Expressive). It helps citizens understand basic legal rights in plain language across English, Urdu (with automatic RTL layout), and Roman Urdu, access offline legal reference cards, prepare emergency SOS alerts with real GPS and battery telemetry, run timed Safety Check-Ins, and explore a demo Lawyer Directory.\par
+\b Important Disclaimer:\b0  HAQOOQ provides general legal information only, not formal legal advice. All advocate profiles in the directory are fictional demo accounts explicitly marked as non-real lawyers.\par
+
+\fs28\b\cf1 2. Core Features & Screens\par
+\fs24\b\cf2 2.1 Onboarding & Localization (\f1 OnboardingScreen.kt, LocaleController.kt, AppStrings.kt\f0 )\par
+\fs22\b0\bullet  Supports English (LTR), Urdu (automatic RTL layout), and Roman Urdu (LTR).\par
+\bullet  Includes Dark Mode (default true-black #000000) and Light Mode toggle.\par
+\bullet  Preferences are persisted locally via SharedPreferences (\f1 haqooq_prefs\f0 ).\par
+
+\fs24\b\cf2 2.2 Home Dashboard (\f1 HomeScreen.kt\f0 )\par
+\fs22\b0\bullet  Displays active AI mode badge, quick legal prompt shortcuts, emergency SOS access, featured legal rights cards, saved case notes, and featured demo lawyers.\par
+\bullet  Adaptive navigation uses a floating bottom dock on compact screens (< 600dp) and a NavigationRail on tablets/foldables (>= 600dp).\par
+
+\fs24\b\cf2 2.3 AI Legal Assistant (\f1 ChatScreen.kt, MockServices.kt\f0 )\par
+\fs22\b0\bullet  Accepts legal questions in English, Urdu, and Roman Urdu.\par
+\bullet  Detects urgent/emergency keywords and enforces safety refusals (refuses requests to hide/destroy/fake evidence or evade lawful investigation).\par
+\bullet  Returns grounded answers with cited legal card sources, urgency level (LOW/MEDIUM/HIGH), actionable next steps, follow-up questions, and mandatory legal disclaimer.\par
+\bullet  Allows saving answers as Case Notes and generating a structured \b Lawyer Briefing Pack\b0  (summary, timeline, evidence checklist, and questions for an advocate).\par
+
+\fs24\b\cf2 2.4 Offline Rights Library (\f1 RightsScreen.kt, LegalCardsData.kt\f0 )\par
+\fs22\b0\bullet  Works 100% offline using pre-bundled multilingual cards across categories: Police & Arrest, FIR, Bail & Court, Women's Safety, Domestic, Cybercrime, Employment, Property, Consumer, and Emergency.\par
+\bullet  Supports keyword search (including Roman Urdu and Urdu synonym expansion), category filter chips, step-by-step guidance, and official portal verification links.\par
+
+\fs24\b\cf2 2.5 Emergency SOS & Safety Check-In (\f1 SosScreen.kt, PersistentSosService.kt, SosDeviceHelper.kt\f0 )\par
+\fs22\b0\bullet  \b Trusted Contacts:\b0  Add, edit, mark primary, and delete up to 5 contacts with Pakistani mobile validation (\f1 03XXXXXXXXX\f0  or \f1 +923XXXXXXXXX\f0 ), persisted in SharedPreferences.\par
+\bullet  \b 3-Second Cancelable SOS Countdown:\b0  Triggers haptic vibration ticks (3 -> 2 -> 1), then reads real device GPS coordinates (with last-known location fallback) and battery percentage to prepare a multilingual SOS alert message.\par
+\bullet  \b Honest Sharing & Dialing:\b0  Opens the device SMS app (\f1 smsto:\f0 ), Android Share Sheet, clipboard copy, or Dialer (\f1 tel:\f0 ) for user-confirmed sending/calling (never sends silent background SMS).\par
+\bullet  \b Safety Check-In Timer:\b0  15/30/60-minute presets persist their deadline locally and trigger vibration, local notification, and prepared SOS alert upon expiry unless confirmed safe.\par
+\bullet  \b Emergency Helplines:\b0  Quick-dial cards for 15 (Police), 1122 (Rescue/Ambulance), 1099 (Human Rights Helpline), and 1991 (Cyber Crime Helpline) with verify-locally notices.\par
+
+\fs24\b\cf2 2.6 Demo Lawyer Marketplace (\f1 LawyersScreen.kt, JsonLawyerService.kt, assets/mock/lawyers.json\f0 )\par
+\fs22\b0\bullet  Loads 4 fictional demo advocate profiles from \f1 assets/mock/lawyers.json\f0 .\par
+\bullet  Supports search plus city, specialization, and spoken language filters.\par
+\bullet  Supports demo consultation booking (with optional explicit-consent attachment of a Lawyer Briefing Pack), scripted multilingual demo chat, and post-booking demo reviews persisted locally.\par
+
+\fs24\b\cf2 2.7 Settings (\f1 SettingsScreen.kt\f0 )\par
+\fs22\b0\bullet  Configure Dark/Light theme, Language, AI Mode override (Online / Offline / Library Only), Lite Mode, and Delete All User Data (clears chats, notes, contacts, incidents, bookings, and reviews).\par
+
+\fs28\b\cf1 3. Online vs. Offline AI Behavior\par
+\fs22\b0\cf2\bullet  \b Online Mode (Live Gemini via Firebase AI Logic):\b0  \f1 HybridAiService\f0  uses \f1 Firebase.ai.generativeModel("gemini-3.5-flash-lite")\f0  with structured JSON schema output (\f1 Schema.obj\f0 ), 45-second coroutine timeouts, and Firebase App Check (Debug token when provided via launch Intent in test harnesses, reCAPTCHA Enterprise on physical devices and release builds). Relevant local HAQOOQ legal cards are passed as grounded context.\par
+\bullet  \b Offline & Library-Only Modes (Automatic Fallback):\b0  \f1 AndroidConnectivityService\f0  monitors real device internet connectivity via \f1 ConnectivityManager\f0 . When offline (or when the user selects Offline / Library-Only mode or Lite Mode), \f1 HybridAiService\f0  automatically delegates to \f1 MockRagService\f0  and \f1 MockAiService\f0  so the citizen still receives grounded guidance from bundled cards without internet.\par
+\bullet  \b Error Transparency:\b0  If an online Gemini request fails (e.g., timeout or App Check error), \f1 ChatScreen\f0  displays the error with one-tap \b Retry\b0  and \b Offline\b0  fallback buttons.\par
+
+\fs28\b\cf1 4. Codebase Architecture\par
+\fs22\b0\cf2\bullet  \f1 app/src/main/java/com/example/contracts/\f0  - Shared domain models (\f1 Models.kt\f0 ), service interfaces (\f1 Services.kt\f0 ), and dependency container (\f1 ServiceLocator.kt\f0 ).\par
+\bullet  \f1 app/src/main/java/com/example/services/ai/\f0  - App Check initializer (\f1 AppCheckConfig.kt\f0 ), real connectivity monitor (\f1 AndroidConnectivityService.kt\f0 ), and hybrid Gemini + offline RAG service (\f1 HybridAiService.kt\f0 ).\par
+\bullet  \f1 app/src/main/java/com/example/data/\f0  - Bundled offline legal cards (\f1 LegalCardsData.kt\f0 ) and local/offline RAG & fallback services (\f1 MockServices.kt\f0 ).\par
+\bullet  \f1 app/src/main/java/com/example/l10n/\f0  - Multilingual strings (\f1 AppStrings.kt\f0 ) and persistent settings controller (\f1 LocaleController.kt\f0 ).\par
+\bullet  \f1 app/src/main/java/com/example/services/sos/\f0  & \f1 lawyers/\f0  - Persistent SOS repository (\f1 PersistentSosService.kt\f0 ), GPS/battery/notification helper (\f1 SosDeviceHelper.kt\f0 ), and JSON lawyer repository (\f1 JsonLawyerService.kt\f0 ).\par
+\bullet  \f1 app/src/main/java/com/example/ui/\f0  - \f1 HaqooqViewModel.kt\f0 , Compose screens, reusable components, and Material 3 theme/typography.\par
+\bullet  \f1 member2/\f0 , \f1 member3/\f0 , \f1 starter_repo/\f0  - Reference Node.js/Flutter source folders from the imported multi-member repository; not compiled into the Android APK.\par
+
+\fs28\b\cf1 5. Android Permissions & Security\par
+\fs22\b0\cf2 Declared in \f1 app/src/main/AndroidManifest.xml\f0 :\par
+\bullet  \f1 INTERNET\f0  & \f1 ACCESS_NETWORK_STATE\f0  (install-time) - Used by Firebase AI Logic, App Check, and real-time online/offline detection.\par
+\bullet  \f1 ACCESS_FINE_LOCATION\f0  & \f1 ACCESS_COARSE_LOCATION\f0  (runtime prompt) - Used on demand during SOS alert preparation to attach a Google Maps coordinates link.\par
+\bullet  \f1 POST_NOTIFICATIONS\f0  (runtime prompt on Android 13+) - Used when a Safety Check-In timer expires.\par
+\bullet  \f1 VIBRATE\f0  (install-time) - Used for tactile countdown feedback during SOS.\par
+\bullet  \b Firebase & App Check:\b0  Configured via \f1 app/google-services.json\f0 , \f1 firebase_applet_config.xml\f0 , and \f1 configureAppCheck(this, intent)\f0  in \f1 MainActivity.onCreate()\f0 .\par
+
+\fs28\b\cf1 6. Build, APK Output & Verification\par
+\fs22\b0\cf2\bullet  \b Build Command:\b0  \f1 gradle assembleDebug\f0 \par
+\bullet  \b Generated Debug APK Path:\b0  \f1 app/build/outputs/apk/debug/app-debug.apk\f0  (also mirrored at \f1 .build-outputs/app-debug.apk\f0 )\par
+\bullet  \b Unit Test Command:\b0  \f1 gradle :app:testDebugUnitTest --tests "com.example.HaqooqArchitectureTest" --tests "com.example.HaqooqMember4Test"\f0 \par
+}

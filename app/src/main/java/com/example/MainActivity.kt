@@ -97,6 +97,7 @@ import com.example.ui.screens.OnboardingScreen
 import com.example.ui.screens.RightsScreen
 import com.example.ui.screens.SettingsScreen
 import com.example.ui.screens.SosScreen
+import com.example.services.ai.configureAppCheck
 import com.example.ui.theme.HaqooqMotion
 import com.example.ui.theme.HaqooqTheme
 
@@ -126,6 +127,7 @@ private data class NavTabItem(
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        configureAppCheck(this, intent)
         enableEdgeToEdge()
         setContent {
             HaqooqApp()
@@ -346,12 +348,17 @@ fun HaqooqApp(viewModel: HaqooqViewModel = viewModel()) {
                                 composable(Routes.CHAT) {
                                     val messages by viewModel.chatMessages.collectAsStateWithLifecycle()
                                     val isLoading by viewModel.isChatLoading.collectAsStateWithLifecycle()
+                                    val chatError by viewModel.chatError.collectAsStateWithLifecycle()
                                     ChatScreen(
                                         messages = messages,
                                         isLoading = isLoading,
+                                        chatError = chatError,
                                         activeMode = activeMode,
                                         strings = strings,
                                         onSendMessage = viewModel::sendChatMessage,
+                                        onRetryOnline = viewModel::retryLastChatMessage,
+                                        onAnswerOffline = viewModel::answerLastQuestionOffline,
+                                        onDismissError = viewModel::dismissChatError,
                                         onClearChat = viewModel::clearChat,
                                         onSaveNote = viewModel::saveNoteFromMessage,
                                         onOpenCard = { cardId -> navController.navigate(Routes.article(cardId)) },

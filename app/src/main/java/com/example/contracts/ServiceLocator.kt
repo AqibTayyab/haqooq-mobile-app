@@ -6,23 +6,31 @@ import com.example.data.MockConnectivityService
 import com.example.data.MockLawyerService
 import com.example.data.MockRagService
 import com.example.data.MockSosService
+import com.example.services.ai.AndroidConnectivityService
+import com.example.services.ai.HybridAiService
 import com.example.services.lawyers.JsonLawyerService
 import com.example.services.sos.PersistentSosService
 
 /**
  * Dependency wiring for HAQOOQ modules.
- * Member 1 ships UI against these contracts using mock services;
- * Member 4 initializes persistent SOS & JSON-backed Lawyer services with app context.
+ * Initializes real Android Connectivity, Hybrid Gemini AI (Online + Offline RAG fallback),
+ * persistent SOS, and JSON-backed Lawyer services with app context.
  */
 object ServiceLocator {
-    var useMockAi: Boolean = true
+    var useMockAi: Boolean = false
     var useMockRag: Boolean = true
     var useMockSos: Boolean = false
     var useMockLawyers: Boolean = false
 
-    val connectivityService: ConnectivityService by lazy { MockConnectivityService() }
+    private var _connectivityService: ConnectivityService? = null
+    val connectivityService: ConnectivityService
+        get() = _connectivityService ?: MockConnectivityService().also { _connectivityService = it }
+
     val ragService: RagService by lazy { MockRagService() }
-    val aiService: AiService by lazy { MockAiService(ragService) }
+
+    private var _aiService: AiService? = null
+    val aiService: AiService
+        get() = _aiService ?: MockAiService(ragService).also { _aiService = it }
 
     private var _sosService: SosService? = null
     val sosService: SosService
@@ -34,6 +42,18 @@ object ServiceLocator {
 
     fun init(context: Context) {
         val appContext = context.applicationContext
+        if (_connectivityService !is AndroidConnectivityService) {
+            _connectivityService = AndroidConnectivityService(appContext)
+        }
+        if (!useMockAi && _aiService !is HybridAiService) {
+            val androidConnectivity = _connectivityService as AndroidConnectivityService
+            _aiService = HybridAiService(
+                ragService = ragService,
+                offlineFallback = MockAiService(ragService),
+                isNetworkAvailable = { androidConnectivity.hasActiveNetwork() },
+                currentModeProvider = { androidConnectivity.activeMode.value }
+            )
+        }
         if (!useMockSos && _sosService !is PersistentSosService) {
             _sosService = PersistentSosService(appContext)
         }

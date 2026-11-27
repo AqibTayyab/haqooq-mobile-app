@@ -1,8 +1,10 @@
 package com.example.ui
 
 import android.app.Application
+import android.util.Log
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
+import kotlinx.coroutines.CancellationException
 import com.example.contracts.AiMode
 import com.example.contracts.AppLanguage
 import com.example.contracts.AskRequest
@@ -59,6 +61,11 @@ class HaqooqViewModel(application: Application) : AndroidViewModel(application) 
 
     private val _isChatLoading = MutableStateFlow(false)
     val isChatLoading: StateFlow<Boolean> = _isChatLoading.asStateFlow()
+
+    private val _chatError = MutableStateFlow<String?>(null)
+    val chatError: StateFlow<String?> = _chatError.asStateFlow()
+
+    private var lastFailedQuestion: String? = null
 
     private val _latestBriefing = MutableStateFlow<LawyerBriefingPack?>(null)
     val latestBriefing: StateFlow<LawyerBriefingPack?> = _latestBriefing.asStateFlow()
@@ -196,33 +203,68 @@ class HaqooqViewModel(application: Application) : AndroidViewModel(application) 
         val timeNow = SimpleDateFormat("HH:mm", Locale.getDefault()).format(Date())
         val userMsg = ChatMessage(isUser = true, text = trimmed, timestampLabel = timeNow)
         _chatMessages.value = _chatMessages.value + userMsg
-        _isChatLoading.value = true
+        _chatError.value = null
+        lastFailedQuestion = null
+        executeChatRequest(question = trimmed, forcedMode = null)
+    }
 
+    fun retryLastChatMessage() {
+        val question = lastFailedQuestion ?: return
+        if (_isChatLoading.value) return
+        _chatError.value = null
+        executeChatRequest(question = question, forcedMode = null)
+    }
+
+    fun answerLastQuestionOffline() {
+        val question = lastFailedQuestion ?: return
+        if (_isChatLoading.value) return
+        _chatError.value = null
+        executeChatRequest(question = question, forcedMode = AiMode.OFFLINE)
+    }
+
+    fun dismissChatError() {
+        _chatError.value = null
+    }
+
+    private fun executeChatRequest(question: String, forcedMode: AiMode?) {
+        _isChatLoading.value = true
         viewModelScope.launch {
-            val currentLang = language.value
-            val mode = if (liteModeEnabled.value) AiMode.LIBRARY_ONLY else activeMode.value
-            val retrieved = rag.retrieveForAi(trimmed, currentLang, topK = 3)
-            val response = ai.ask(
-                request = AskRequest(
-                    question = trimmed,
-                    language = currentLang,
-                    cards = retrieved
-                ),
-                mode = mode
-            )
-            val botMsg = ChatMessage(
-                isUser = false,
-                text = response.answer,
-                response = response,
-                timestampLabel = SimpleDateFormat("HH:mm", Locale.getDefault()).format(Date())
-            )
-            _chatMessages.value = _chatMessages.value + botMsg
-            _isChatLoading.value = false
+            try {
+                val currentLang = language.value
+                val mode = forcedMode ?: if (liteModeEnabled.value) AiMode.LIBRARY_ONLY else activeMode.value
+                val retrieved = rag.retrieveForAi(question, currentLang, topK = 3)
+                val response = ai.ask(
+                    request = AskRequest(
+                        question = question,
+                        language = currentLang,
+                        cards = retrieved
+                    ),
+                    mode = mode
+                )
+                val botMsg = ChatMessage(
+                    isUser = false,
+                    text = response.answer,
+                    response = response,
+                    timestampLabel = SimpleDateFormat("HH:mm", Locale.getDefault()).format(Date())
+                )
+                _chatMessages.value = _chatMessages.value + botMsg
+                lastFailedQuestion = null
+            } catch (e: CancellationException) {
+                throw e
+            } catch (e: Exception) {
+                Log.e("HaqooqViewModel", "AI chat request failed", e)
+                lastFailedQuestion = question
+                _chatError.value = e.localizedMessage ?: "Online AI request failed."
+            } finally {
+                _isChatLoading.value = false
+            }
         }
     }
 
     fun clearChat() {
         _chatMessages.value = emptyList()
+        _chatError.value = null
+        lastFailedQuestion = null
     }
 
     fun saveNoteFromMessage(msg: ChatMessage) {
